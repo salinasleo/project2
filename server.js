@@ -5,6 +5,8 @@ var exphbs = require("express-handlebars");
 
 var db = require("./models");
 
+// console.log(process.env.TWITTER_CONSUMER_KEY) ;
+
 var app = express();
 var PORT = process.env.PORT || 3000;
 
