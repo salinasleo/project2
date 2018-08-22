@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "ArtCat23376!",
-    "database": "",
+    "password": "Richmond123",
+    "database": "mentorsProgram",
     "host": "localhost",
     "dialect": "mysql"
   },
