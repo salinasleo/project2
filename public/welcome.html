@@ -1,115 +1,131 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Mentor Finder</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="./public/styles.css" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
-    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <script
-    src="https://code.jquery.com/jquery-3.3.1.min.js"
-    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
 </head>
-<body>
-        <div class="jumbotron">
-                <h1 id="welcome" class="display-4">Mentor Match</h1>
-                <!-- <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p> -->
-                <hr class="my-4">
-                <h3 id="h3">Click a button below to get started</h3>
-                <br>
-                <br>
-                    <div class="row">
-                    <br>
-                    <br>
-                    <div id="one" class="col-md-6">
-                <a id="btn1" class="btn btn-primary btn-lg" href="#" role="button">I'm a Mentor</a>
-                    </div>
-                <div id="two" class="col-md-6">
-                <a id="btn2" class="btn btn-primary btn-lg" href="#" role="button">I'm a Mentee</a>
-            </div>
-        </div>
 
-              </div>
-     
+<body>
+    <div class="jumbotron">
+        <h1 id="welcome" class="display-4">Mentor Match</h1>
+        <!-- <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p> -->
+        <hr class="my-4">
+        <h3 id="h3">Click a button below to get started</h3>
+        <div class="container">
+            <div class="row">
+                <div id="one" class="col-6">
+                    <a id="btn1" class="btn btn-primary btn-lg" href="#" role="button">I'm a Mentor</a>
+                </div>
+                <div id="two" class="col-6">
+                    <a id="btn2" class="btn btn-primary btn-lg" href="#" role="button">I'm a Mentee</a>
+                </div>
+            </div>
+        </div> 
+    </div>
+
 </body>
 <style>
+    body {
+        background: #00467F;
+        /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #A5CC82, #00467F);
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #A5CC82, #00467F);
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+
     .list-group-item {
-  line-height: 2.5;
-}
-.jumbotron {
-    background-image: url("http://waltir.com/wp-content/uploads/2017/08/cropped-qtq50-UArAnS-2.jpeg");
-    /* background-size: cover; */
-    -webkit-background-size: 100% 100%;
-    -moz-background-size: 100% 100%;
-    -o-background-size: 100% 100%;
-    background-size: 100% 100%;
-}
-#welcome {
-    font-family: 'Lato', sans-serif;
-    text-align: center;
-    color: white;
-    text-shadow:
-		-1px -1px 0 #000,
-		1px -1px 0 #000,
-		-1px 1px 0 #000,
-		1px 1px 0 #000;
-}
-#h3 {
-    font-family: 'Lato', sans-serif;
-    text-align: center;
-    color: white;
-    text-shadow:
-		-1px -1px 0 #000,
-		1px -1px 0 #000,
-		-1px 1px 0 #000,
-		1px 1px 0 #000;
-}
-#one {
-    text-align: right;
-    font-family: 'Lato', sans-serif;
-}
-#two {
-    text-align: left;
-    font-family: 'Lato', sans-serif;
-}
+        line-height: 2.5;
+    }
 
-#btn1 {
-  transition: transform .2s;
-  background-color: transparent;
-  border-color: white;
-  border-width: .1px;
-  border-radius: 0px;
+    .jumbotron {
+        background-image: url("http://waltir.com/wp-content/uploads/2017/08/cropped-qtq50-UArAnS-2.jpeg");
+        /* background-size: cover; */
+        -webkit-background-size: 100% 100%;
+        -moz-background-size: 100% 100%;
+        -o-background-size: 100% 100%;
+        background-size: 100% 100%;
+        border-radius: 0px;
+    }
 
-  }
+    #welcome {
+        font-family: 'Lato', sans-serif;
+        text-align: center;
+        color: white;
+        text-shadow: -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+    }
 
-#btn1:hover {
-  -ms-transform: scale(1.2); /* IE 9 */
-  -webkit-transform: scale(1.2); /* Safari 3-8 */
-  transform: scale(1.2); 
-}
+    #h3 {
+        font-family: 'Lato', sans-serif;
+        text-align: center;
+        color: white;
+        text-shadow: -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+    }
 
-#btn2 {
- transition: transform .2s;
- background-color: transparent;
- border-color: white;
- border-width: .1px;
- border-radius: 0px;
+    #one {
+        text-align: right;
+        font-family: 'Lato', sans-serif;
+    }
+
+    #two {
+        text-align: left;
+        font-family: 'Lato', sans-serif;
+    }
+
+    #btn1 {
+        transition: transform .2s;
+        background-color: transparent;
+        border-color: white;
+        border-width: .1px;
+        border-radius: 0px;
+
+    }
+
+    #btn1:hover {
+        -ms-transform: scale(1.2);
+        /* IE 9 */
+        -webkit-transform: scale(1.2);
+        /* Safari 3-8 */
+        transform: scale(1.2);
+    }
+
+    #btn2 {
+        transition: transform .2s;
+        background-color: transparent;
+        border-color: white;
+        border-width: .1px;
+        border-radius: 0px;
 
 
 
-  }
+    }
 
-#btn2:hover {
-  -ms-transform: scale(1.2); /* IE 9 */
-  -webkit-transform: scale(1.2); /* Safari 3-8 */
-  transform: scale(1.2); 
-}
-
+    #btn2:hover {
+        -ms-transform: scale(1.2);
+        /* IE 9 */
+        -webkit-transform: scale(1.2);
+        /* Safari 3-8 */
+        transform: scale(1.2);
+    }
 </style>
+
 </html>
