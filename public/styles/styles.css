@@ -1,3 +1,74 @@
+body {
+  background: #00467F;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #A5CC82, #00467F);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #A5CC82, #00467F);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
 .list-group-item {
   line-height: 2.5;
+}
+.jumbotron {
+  background-image: url("http://waltir.com/wp-content/uploads/2017/08/cropped-qtq50-UArAnS-2.jpeg");
+  /* background-size: cover; */
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  background-size: 100% 100%;
+  border-radius: 0px;
+}
+#welcome {
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  color: white;
+  text-shadow: -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;
+}
+#h3 {
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  color: white;
+  text-shadow: -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;
+}
+#one {
+  text-align: right;
+  font-family: 'Lato', sans-serif;
+}
+#two {
+  text-align: left;
+  font-family: 'Lato', sans-serif;
+}
+#btn1 {
+  transition: transform .2s;
+  background-color: transparent;
+  border-color: white;
+  border-width: .1px;
+  border-radius: 0px;
+}
+#btn1:hover {
+  -ms-transform: scale(1.2);
+  /* IE 9 */
+  -webkit-transform: scale(1.2);
+  /* Safari 3-8 */
+  transform: scale(1.2);
+}
+#btn2 {
+  transition: transform .2s;
+  background-color: transparent;
+  border-color: white;
+  border-width: .1px;
+  border-radius: 0px;
+}
+#btn2:hover {
+  -ms-transform: scale(1.2);
+  /* IE 9 */
+  -webkit-transform: scale(1.2);
+  /* Safari 3-8 */
+  transform: scale(1.2);
 }
