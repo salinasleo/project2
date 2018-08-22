@@ -1,5 +1,3 @@
-var db = require("../models");
-
 module.exports = function(app) {
 
 
@@ -9,8 +7,12 @@ module.exports = function(app) {
   });
   
   app.get("/mentee", function(req, res) {
-    res.render("mentee_form")
+    res.render("menteeSurvey")
   });
+
+  app.get("/mentor", function(req, res) {
+    res.render("mentorSurvey")
+  })
 };
 
 
