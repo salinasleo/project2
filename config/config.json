@@ -1,7 +1,11 @@
 {
   "development": {
     "username": "root",
+<<<<<<< HEAD
     "password": " ",
+=======
+    "password": "RicBootCamp",
+>>>>>>> 36c60b016d87a63c0dd9691e7c561a663ee4a42d
     "database": "mentorProgram",
     "host": "localhost",
     "dialect": "mysql"
