@@ -1,6 +1,20 @@
 var db = require("../models");
 
 module.exports = function(app) {
+
+
+  // // Render 404 page for any unmatched routes
+  app.get("*", function(req, res) {
+    res.render("404");
+  });
+  
+  app.get("/mentee", function(req, res) {
+    res.render("mentee_form")
+  });
+};
+
+
+
   // // Load index page
   // app.get("/", function(req, res) {
   //   db.Example.findAll({}).then(function(dbExamples) {
@@ -21,10 +35,4 @@ module.exports = function(app) {
   // });
 
   // // Render 404 page for any unmatched routes
-  // app.get("*", function(req, res) {
-  //   res.render("404");
-  
-  app.get("/forms/friends", function(req, res) {
-    res.render("/views/mentee_form")
-  });
-};
+ 
