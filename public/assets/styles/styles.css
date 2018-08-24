@@ -18,10 +18,11 @@ body {
   background-size: 100% 100%;
   border-radius: 0px;
 }
+
 #welcome {
   font-family: 'Lato', sans-serif;
   text-align: center;
-  color: white;
+  color:white;
   text-shadow: -1px -1px 0 #000,
   1px -1px 0 #000,
   -1px 1px 0 #000,
@@ -36,6 +37,17 @@ body {
   -1px 1px 0 #000,
   1px 1px 0 #000;
 }
+
+#h1 {
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  color: white;
+  text-shadow: -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;
+}
+
 #one {
   text-align: right;
   font-family: 'Lato', sans-serif;
