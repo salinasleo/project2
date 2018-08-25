@@ -1,3 +1,5 @@
+var occupation = [];
+
 $(document).ready(function() {
     
     $("#MentorSubmit").on("click", function(event) {
@@ -14,11 +16,39 @@ $(document).ready(function() {
     //   console.log("Occupations # 3 interested in are " + document.getElementById("occupations")[2].value);
       for ( var i = 0; i < Math.min(3,document.getElementById("occupations").selectedOptions.length); i++) {
         console.log("Occupation " + (i+1) + " interested in is " + document.getElementById("occupations").selectedOptions[i].value);
+     
+     occupation[i] = document.getElementById("occupations").selectedOptions[i].value;
       }
       console.log("Experience is " + document.getElementById("experienceBlurb").value);
       console.log("Day like is " + document.getElementById("dayLikeBlurb").value);
       console.log("User Type is Mentor");
   
+
+        // make a mentor obj
+  var newMentor = {
+    firstName: document.getElementById("firstName").value,
+    lastName: document.getElementById("lastName").value,
+    email: document.getElementById("email").value,
+    zipCode: document.getElementById("zipCode").value, 
+    occupation1: occupation[0], 
+    occupation2: occupation[1], 
+    occupation3: occupation[2], 
+    experienceBlurb: document.getElementById("experienceBlurb").value, 
+    dayLikeBlurb: document.getElementById("dayLikeBlurb").value, 
+    userType: "Mentor"
+  };
+
+  // send an AJAX POST-request with jQuery
+  $.post("/api/new", newMentor)
+    // on success, run this callback
+    .then(function(data) {
+      // log the data we found
+      console.log(data);
+      // tell the user we're adding a character with an alert window
+      alert("Adding mentor...");
+    });
+
+
     });
   });
 
