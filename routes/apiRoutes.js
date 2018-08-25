@@ -44,6 +44,19 @@ module.exports = function(app) {
       });
     });
 
+
+  db.Mentee.create({
+    firstName: mentee.firstName,
+    lastName: mentee.lastName,
+    email: mentee.email,
+    zipCode: mentee.zipCode,
+    occupation1: mentee.occupation1,
+    occupation2: mentee.occupation2,
+    occupation3: mentee.occupation3,
+    objectives: mentee.objectives,
+    userType: mentee.userType
+  });
+});
   // Delete an example by id
   app.delete("/api/examples/:id", function(req, res) {
     db.Example.destroy({ where: { id: req.params.id } }).then(function(dbExample) {

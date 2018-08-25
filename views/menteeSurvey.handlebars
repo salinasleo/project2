@@ -1,22 +1,31 @@
-<div id="home">
-    <div id="mentor-survey" class="container">
+<div id="mentorForm">
+    <div class="container">
         <div class="row">
             <div class="col-8 offset-2">
                 <h1></h1>
-                <form class="clearfix mb-4" method="POST"></form>
-                <h2>Please complete the following (brief) questionnaire:</h2>
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" id="inputGroup-sizing-default">Name</span>
+                <form>
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="email" class="form-control" id="email" placeholder="name@gmail.com">
                     </div>
-                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-                </div>
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" id="inputGroup-sizing-default">Email Address</span>
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" class="form-control" id="firstName" placeholder=" ">
                     </div>
-                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-                </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" class="form-control" id="lastName" placeholder=" ">
+                    </div>
+                    <div class="form-group">
+                        <label for="zipCode">Zip</label>
+                        <input type="number" class="form-control" id="zipCode" placeholder="12345">
+                    </div>
+                    <form>
+                        <div class="form-group">
+                            <label for="profilePic">Profile Picture</label>
+                            <input type="file" class="form-control-file" id="profilePic">
+                        </div>
+                 </form>
                 <div class="form-group">
                     <label for="occupations">Please choose your occupation/industry</label>
                     <select multiple class="form-control" id="occupations">
@@ -43,45 +52,17 @@
                         <option>Sales and Related</option>
                         <option>Transportation and Material Moving</option>
                     </select>
-                </div>
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" id="inputGroup-sizing-default">Zip</span>
-                    </div>
-                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-                </div>
-                <form>
-                    Please indicate how many mile you are willing to travel to meet your mentor (between 5 and 100):
-                    <input type="number" name="quantity" min="5" max="100">
-                </form>
-                <br>
-                <p>Please indicate what you most hope to achieve by contacting a mentor:</p>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                    <label class="form-check-label" for="exampleRadios1">
-                        I want help deciding if the industry is right for me.
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                    <label class="form-check-label" for="exampleRadios1">
-                        I want help deciding which area of the industry to explore further.
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                    <label class="form-check-label" for="exampleRadios1">
-                        I want to expand my network.
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                    <label class="form-check-label" for="exampleRadios1">
-                        I want to better understand a day in the life of a person in my aspirant industry.
-                    </label>
-                </div>
-                <br>
-                <button id="submit_button" type="button" class="btn btn-primary btn-lg">Submit</button>
+                </div> 
+                <div class="form-group">
+                    <label for="objectives">Please indicate what you most hope to achieve by contacting a mentor:</label>
+                    <select single class="form-control" id="objectives">
+                            <option>I want help deciding if the industry is right for me.</option>
+                            <option>I want help deciding which area of the industry to explore further.</option>
+                            <option>I want to expand my network.</option>
+                            <option>I want to better understand a day in the life of a person in my aspirant industry</option>               
+                    </select>
+               </div>
+                <button id="menteeSubmit" type="button" class="btn btn-primary btn-lg">Submit</button>
             </div>
             </form>
         </div>
@@ -89,4 +70,4 @@
 </div>
 </div>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="/js/index.js"></script>
+<script src="../assets/js/mentee.js"></script>
