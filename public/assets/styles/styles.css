@@ -97,10 +97,14 @@ footer {
 #mentor-survey {
   background-color: whitesmoke;
   opacity: 80%;
-  padding: 20px;
+  padding: 30px;
+  border-radius: 25px;
+  margin-left: 20%;
+  margin-right: 20%;
 }
 
 #FAQ {
   background-color: whitesmoke;
-  padding: 20px;
+  padding: 30px;
+  border-radius: 25px;
 }
