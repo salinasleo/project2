@@ -32,7 +32,7 @@ $(document).ready(function() {
 };
 
 // send an AJAX POST-request with jQuery
-$.post("/api/new", newMentee)
+$.post("/api/newmentee", newMentee)
   // on success, run this callback
   .then(function(data) {
     // log the data we found

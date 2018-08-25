@@ -23,7 +23,7 @@ module.exports = function(app) {
   // });
 
     // If a new mentor registers...
-    app.post("/api/new", function(req, res) {
+    app.post("/api/newmentor", function(req, res) {
       // Take the request...
       var mentor = req.body;
       console.log(mentor);
@@ -44,6 +44,11 @@ module.exports = function(app) {
       });
     });
 
+    app.post("/api/newmentee", function(req, res) {
+      // Take the request...
+      var mentee = req.body;
+      console.log(mentee);
+      // var routeName = mentor.email.replace(/\s+/g, "").toLowerCase();
 
   db.Mentee.create({
     firstName: mentee.firstName,
@@ -57,6 +62,7 @@ module.exports = function(app) {
     userType: mentee.userType
   });
 });
+
   // Delete an example by id
   app.delete("/api/examples/:id", function(req, res) {
     db.Example.destroy({ where: { id: req.params.id } }).then(function(dbExample) {
