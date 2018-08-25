@@ -6,6 +6,11 @@ body {
   background: linear-gradient(to right, #A5CC82, #00467F);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+
+footer {
+  text-align: center;
+}
+
 .list-group-item {
   line-height: 2.5;
 }
@@ -83,4 +88,10 @@ body {
   -webkit-transform: scale(1.2);
   /* Safari 3-8 */
   transform: scale(1.2);
+}
+
+#mentor-survey {
+  background-color: whitesmoke;
+  opacity: 80%;
+  padding: 20px;
 }
