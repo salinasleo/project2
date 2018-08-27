@@ -14,6 +14,10 @@ module.exports = function (app) {
     res.render("FAQ")
   });
 
+  app.get("/homeRoute", function (req, res) {
+    res.render("index")
+  });
+
 
   // Load index page
   app.get("/", function (req, res) {
