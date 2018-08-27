@@ -4,8 +4,6 @@ body {
   background: linear-gradient(to right, #274046, #E6DADA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-
-
 .footer {
   text-align: center;
   display: block;
@@ -19,7 +17,6 @@ body {
   padding-top: 5px;
 }
 
-
  #intro {
    color: white;
    text-align: center;
@@ -28,6 +25,7 @@ body {
 .list-group-item {
   line-height: 2.5;
 }
+
 .jumbotron {
   background-image: url("http://waltir.com/wp-content/uploads/2017/08/cropped-qtq50-UArAnS-2.jpeg");
   /* background-size: cover; */
@@ -37,27 +35,37 @@ body {
   background-size: 100% 100%;
   border-radius: 0px;
   margin: 0px;
-  padding-top: 0px;
-  padding-bottom: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .carousel-inner > .item > img  {
-  width: 100%; height:300px; display:block;  margin-left:auto; margin-right:auto;
+  width: 100%; 
+  height: 200px; 
+  display:block;  
+  margin-left:auto; 
+  margin-right:auto;
 }
 
 .carouselSlides > .item > img {
-  width: 100%; height:300px; display:block;  margin-left:auto; margin-right:auto;
+  width: 100%; 
+  height: 200px; 
+  display:block;  
+  margin-left:auto; 
+  margin-right:auto;
 }
 
 #welcome {
   font-family: 'Lato', sans-serif;
   text-align: center;
+  font-weight: bold;
   color:white;
   text-shadow: -1px -1px 0 #000,
   1px -1px 0 #000,
   -1px 1px 0 #000,
   1px 1px 0 #000;
 }
+
 #h3 {
   font-family: 'Lato', sans-serif;
   text-align: center;
@@ -115,19 +123,33 @@ body {
   transform: scale(1.2);
 }
 
+
+#menForm {
+  background-color: whitesmoke;
+  opacity: 80%;
+  padding: 30px;
+  border-radius: 25px;
+}
+
+
 #FAQ {
   background-color: whitesmoke;
-  padding: 20px;
+  opacity: 80%;
+  padding: 30px;
+  border-radius: 25px;
 }
+
 #about {
   font-family: 'Lato', sans-serif;
   text-align: center;
   color: white;
+  padding: 30px;
   /* text-shadow: -1px -1px 0 #000,
   1px -1px 0 #000,
   -1px 1px 0 #000,
   1px 1px 0 #000; */
 }
+
 #abt {
   font-family: 'Lato', sans-serif;
   text-align: center;
