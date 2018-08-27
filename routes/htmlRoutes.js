@@ -1,3 +1,4 @@
+
 var db = require("../models");
 
 module.exports = function (app) {
@@ -21,19 +22,57 @@ module.exports = function (app) {
 
   // Load index page
   app.get("/", function (req, res) {
-    db.Example.findAll({}).then(function (dbExamples) {
+    // db.Example.findAll({}).then(function(dbExamples) {
       res.render("index");
+    // });
+  });
+
+  var matches = [];
+
+  app.get("/search", function(req, res) {
+    db.Mentor.findAll({}).then(function(getMatches) {
+      res.render("search", {
+        // msg: "Welcome!",
+        results: res.json(getMatches) /*passMatches(getMatches)*/ /*getMatches[0].dataValues.firstName*/
+      });
+      // publishHits(getMatches);
+      // console.log(getMatches);
     });
   });
 
-  // app.get("/", function(req, res) {
-  //   db.Example.findAll({}).then(function(dbExamples) {
-  //     res.render("index", {
-  //       msg: "Welcome!",
-  //       examples: dbExamples
-  //     });
-  //   });
-  // });
+  // function passMatches(data) {
+  // matches = data.json({});
+  // console.log(matches);
+  // };
+
+
+
+  
+
+  // Getting todos from database when page loads
+  // matchingFunction();
+
+  // // This function resets the todos displayed with new todos from the database
+  // function publishHits(data) {
+  //   $matches.empty();
+  //   var rowsToAdd = [];
+  //   for (var i = 0; i < data.length; i++) {
+  //     rowsToAdd.push(createNewRow(data[i]));
+  //   }
+  //   $matches.prepend(rowsToAdd);
+  // }
+
+
+  // // This function grabs todos from the database and updates the view
+  function matchingFunction() {
+    app.get("/search", function(data) {
+      matches = data;
+      initializeRows(data);
+    });
+  }
+
+
+
 
 
   // // Render 404 page for any unmatched routes
