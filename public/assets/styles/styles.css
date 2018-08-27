@@ -123,12 +123,14 @@ body {
   transform: scale(1.2);
 }
 
+
 #menForm {
   background-color: whitesmoke;
   opacity: 80%;
   padding: 30px;
   border-radius: 25px;
 }
+
 
 #FAQ {
   background-color: whitesmoke;
