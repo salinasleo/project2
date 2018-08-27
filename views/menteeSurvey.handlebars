@@ -1,33 +1,37 @@
-<div id="mentorForm">
+<div id="menteeForm">
     <div class="container">
         <div class="row">
             <div class="col-8 offset-2">
                 <h1></h1>
                 <form>
                     <div class="form-group">
-                        <label for="email">Email address</label>
+                        <label for="email">Email address (required)</label>
                         <input type="email" class="form-control" id="email" placeholder="name@gmail.com">
                     </div>
                     <div class="form-group">
-                        <label for="firstName">First Name</label>
+                        <label for="firstName">First Name (required)</label>
                         <input type="text" class="form-control" id="firstName" placeholder=" ">
                     </div>
                     <div class="form-group">
-                        <label for="lastName">Last Name</label>
+                        <label for="lastName">Last Name (required)</label>
                         <input type="text" class="form-control" id="lastName" placeholder=" ">
                     </div>
                     <div class="form-group">
-                        <label for="zipCode">Zip</label>
+                        <label for="zipCode">Zip (required)</label>
                         <input type="number" class="form-control" id="zipCode" placeholder="12345">
+                    </div>
+                    <div class="form-group">
+                        <label for="miles">Please indicate how many miles(between 5 and 100) you are willing to travel to meet your mentor (required)</label>
+                        <input type="number" min="5" max="100" class="form-control" id="milesMeet" placeholder=" ">
                     </div>
                     <form>
                         <div class="form-group">
-                            <label for="profilePic">Profile Picture</label>
+                            <label for="profilePic">Profile Picture (optional)</label>
                             <input type="file" class="form-control-file" id="profilePic">
                         </div>
                  </form>
                 <div class="form-group">
-                    <label for="occupations">Please choose your occupation/industry</label>
+                    <label for="occupations">Please choose your occupation/industry (required one choice)  *You can add two additional choices by holding the command key(Mac) or control key(Windows).</label>
                     <select multiple class="form-control" id="occupations">
                         <option>Architecture and Engineering</option>
                         <option>Arts, Design, Entertainment,Sports,and Media</option>
@@ -54,7 +58,7 @@
                     </select>
                 </div> 
                 <div class="form-group">
-                    <label for="objectives">Please indicate what you most hope to achieve by contacting a mentor:</label>
+                    <label for="objectives">Please indicate what you most hope to achieve by contacting a mentor (required)</label>
                     <select single class="form-control" id="objectives">
                             <option>I want help deciding if the industry is right for me.</option>
                             <option>I want help deciding which area of the industry to explore further.</option>
