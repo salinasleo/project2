@@ -55,6 +55,7 @@ module.exports = function(app) {
     lastName: mentee.lastName,
     email: mentee.email,
     zipCode: mentee.zipCode,
+    milesMeet: mentee.milesMeet,
     occupation1: mentee.occupation1,
     occupation2: mentee.occupation2,
     occupation3: mentee.occupation3,

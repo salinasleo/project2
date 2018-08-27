@@ -9,9 +9,9 @@ var Mentor = sequelize.define("Mentor", {
   occupation1: DataTypes.STRING,
   occupation2: DataTypes.STRING,
   occupation3: DataTypes.STRING,
-  experienceBlurb: DataTypes.STRING,
-  dayLikeBlurb: DataTypes.STRING,
-  userType: DataTypes.STRING,
+  experienceBlurb: {type: DataTypes.TEXT, allowNull: false},
+  dayLikeBlurb: {type: DataTypes.TEXT, allowNull: true},
+  userType: {type: DataTypes.STRING, defaultValue: Mentor},
 });
 
 return Mentor;

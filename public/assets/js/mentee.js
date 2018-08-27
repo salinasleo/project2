@@ -24,6 +24,7 @@ $(document).ready(function() {
   lastName: document.getElementById("lastName").value,
   email: document.getElementById("email").value,
   zipCode: document.getElementById("zipCode").value,
+  milesMeet: document.getElementById("milesMeet").value,
   occupation1: occupation[0],
   occupation2: occupation[1],
   occupation3: occupation[2],
