@@ -32,7 +32,7 @@ $(document).ready(function() {
   userType: "Mentee"
 };
 
-// alert("Adding mentee...");
+
 
 // send an AJAX POST-request with jQuery
 $.post("/api/newmentee", newMentee)
@@ -46,7 +46,17 @@ $.post("/api/newmentee", newMentee)
   });
 
 
+
+  // get route, edited to match sequelize
+function getmatches()
+$.get("/search/:apiparams")
+    .then(function(responseObj) {
+      console.log(responseObj);
+    });
+ });
+
   });
-});
+
+  
   
    
