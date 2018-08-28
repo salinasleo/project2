@@ -52,6 +52,7 @@ $.post("/api/newmentee", newMentee)
 
 
   // get route, edited to match sequelize
+function getmatches()
 $.get("/search/:apiparams")
     .then(function(responseObj) {
       console.log(responseObj);
@@ -60,5 +61,6 @@ $.get("/search/:apiparams")
 
   });
 
+  
   
    
