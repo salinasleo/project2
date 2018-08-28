@@ -32,14 +32,17 @@ $(document).ready(function() {
   userType: "Mentee"
 };
 
+alert("Adding mentee...");
+
 // send an AJAX POST-request with jQuery
 $.post("/api/newmentee", newMentee)
   // on success, run this callback
   .then(function(data) {
     // log the data we found
     console.log(data);
+    // res.render("search");
     // tell the user we're adding a character with an alert window
-    alert("Adding mentee...");
+   
   });
 
 
