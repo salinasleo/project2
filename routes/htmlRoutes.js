@@ -67,6 +67,20 @@ app.get("/search", function(req, res) {
     });
  });
 
+ app.get("/search/:apiparams", function(req, res){
+  db.Mentors.findAll({
+    where: {
+      occupation1: req.query.occupation1,
+      occupation2: req.query.occupation2,
+      occupation3: req.query.occupation3
+    }
+  }).then(function(stuff){
+    res.render(stuff);
+    return stuff;
+  });
+});
+
+
   // function passMatches(data) {
   // matches = data.json({});
   // console.log(matches);
@@ -90,13 +104,13 @@ app.get("/search", function(req, res) {
   // }
 
 
-  // // This function grabs todos from the database and updates the view
-  function matchingFunction() {
-    app.get("/search", function(data) {
-      matches = data;
-      initializeRows(data);
-    });
-  }
+  // // // This function grabs todos from the database and updates the view
+  // function matchingFunction() {
+  //   app.get("/search", function(data) {
+  //     matches = data;
+  //     initializeRows(data);
+  //   });
+  // }
 
 
 

@@ -70,16 +70,19 @@ module.exports = function(app) {
       res.json(dbExample);
     });
   });
-};
 
-// app.get("/api/search", function(req, res){
-//   db.Mentors.findAll({
-//     where: {
-//       occupation1: req.query.userinput1,
-//       occupation2: req.query.occupation2,
-//       occupation3: req.query.occupation3
-//     }
-//   }).then(function(stuff){
-//     res.render(stuff);
-//   })
-// });
+
+app.get("/search/:apiparams", function(req, res){
+  db.Mentors.findAll({
+    where: {
+      occupation1: req.query.occupation1,
+      occupation2: req.query.occupation2,
+      occupation3: req.query.occupation3
+    }
+  }).then(function(stuff){
+    res.render(stuff);
+    return stuff;
+  });
+});
+
+};
