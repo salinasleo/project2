@@ -33,6 +33,10 @@ $(document).ready(function() {
 };
 
 alert("Adding mentee...");
+apiparams = "?occupation1=" + encodeURIComponent(occupation[0]) + "&occupation2" + encodeURIComponent(occupation[1])
++ "&occupation3" + encodeURIComponent(occupation[2]) + "&distance=" + document.getElementById("milesMeet").value 
+ + "&zipCode=" + document.getElementById("zipCode").value;
+ console.log(apiparams);
 
 // send an AJAX POST-request with jQuery
 $.post("/api/newmentee", newMentee)
@@ -46,7 +50,15 @@ $.post("/api/newmentee", newMentee)
   });
 
 
+
+  // get route, edited to match sequelize
+$.get("/search/:apiparams")
+    .then(function(responseObj) {
+      console.log(responseObj);
+    });
+ });
+
   });
-});
+
   
    
