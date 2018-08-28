@@ -21,10 +21,11 @@ module.exports = function (app) {
     res.render("index")
   });
 
-  app.get("/search", function (req, res) {
-    res.render("search")
-  });
 
+  // app.get("/search", function(req, res) {
+  
+  //     res.render("search")
+  // });
 
 
   // Load index page
@@ -36,20 +37,35 @@ module.exports = function (app) {
 
   var matches = [];
 
-  app.get("/search", function(req, res) {
-    db.Mentor.findAll({
-      where: {occupation1: 'Architecture and Engineering' , 
-              zipCode: 23226
-    }
-    }).then(function(getMatches) {
-      res.render("search", {
-        // msg: "Welcome!",
-        results: res.json(getMatches) /*passMatches(getMatches)*/ /*getMatches[0].dataValues.firstName*/
-      });
-      // publishHits(getMatches);
-      // console.log(getMatches);
+  // app.get("/search", function(req, res) {
+  //   db.Mentor.findAll({
+  //     where: {occupation1: 'Architecture and Engineering'
+  //   }
+  //   }).then(function(getMatches) {
+  //     console.log(getMatches);
+  //   //  menteeMatches = res.json(getMatches) ;
+  //     res.render("search", {
+  //       // msg: "Welcome!",
+  //       results: /*passMatches(getMatches)*/  getMatches.dataValues
+  //     });
+  //     // publishHits(getMatches);
+    
+  //   });
+  // });
+
+
+  // get route, edited to match sequelize
+app.get("/search", function(req, res) {
+  // replace old function with sequelize function
+  db.Mentor.findAll()
+    // use promise method to pass the burgers...
+    .then(function(responseObj) {
+      console.log(responseObj);
+      // into the main index, updating the page
+      var hbsObject = { results: responseObj };
+      return res.render("search", hbsObject);
     });
-  });
+ });
 
   // function passMatches(data) {
   // matches = data.json({});

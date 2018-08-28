@@ -1,6 +1,22 @@
-{{results}}
+{{!-- 
+{{#each }}
+{{this.firstName}}
+{{/each}} --}}
 
-<div id=Mentormatches>matches[0].dataValues.firstName</div>
+<ul>Your Mentor Matches:
+    
+  {{#each results}}
+  	<li>
+          <p>id: {{this.id}}</p>
+  	   <p>first name: {{this.firstName}}</p>
+       <p>last anme: {{this.lastName}}</p>
+  	</li>
+  {{/each}}
+</ul>
+
+
+
+<div id="test">"hello"</div>
 
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
