@@ -58,14 +58,29 @@ module.exports = function (app) {
 app.get("/search", function(req, res) {
   // replace old function with sequelize function
   db.Mentor.findAll()
-    // use promise method to pass the burgers...
     .then(function(responseObj) {
       console.log(responseObj);
       // into the main index, updating the page
       var hbsObject = { results: responseObj };
       return res.render("search", hbsObject);
+        
     });
  });
+app.post("/api/search", function(req, res){
+  // console.log(JSON.stringify(req.body));
+  db.Mentor.findAll({
+    where: {
+      occupation1: req.body.occupations[0],
+      occupation2: req.body.occupations[1],
+      occupation3: req.body.occupations[2]
+    }
+  }).then(function(stuff){
+    console.log(stuff);
+    var mentorObj = { results: stuff };
+    return res.render("search", mentorObj);
+  })
+});
+ 
 
  app.get("/search/:apiparams", function(req, res){
   var chosen = req.params.occupation1;
