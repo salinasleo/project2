@@ -1,6 +1,8 @@
 
 var db = require("../models");
 
+
+
 module.exports = function (app) {
 
   app.get("/mentee", function (req, res) {
@@ -19,6 +21,11 @@ module.exports = function (app) {
     res.render("index")
   });
 
+  app.get("/search", function (req, res) {
+    res.render("search")
+  });
+
+
 
   // Load index page
   app.get("/", function (req, res) {
@@ -30,7 +37,11 @@ module.exports = function (app) {
   var matches = [];
 
   app.get("/search", function(req, res) {
-    db.Mentor.findAll({}).then(function(getMatches) {
+    db.Mentor.findAll({
+      where: {occupation1: 'Architecture and Engineering' , 
+              zipCode: 23226
+    }
+    }).then(function(getMatches) {
       res.render("search", {
         // msg: "Welcome!",
         results: res.json(getMatches) /*passMatches(getMatches)*/ /*getMatches[0].dataValues.firstName*/
@@ -95,3 +106,17 @@ module.exports = function (app) {
 
   // // Render 404 page for any unmatched routes
 
+  db.Mentor.create  ({
+    firstName: 'Nemo',
+    lastName: 'Disney',
+    email: 'nemo@gmail.com',
+    zipCode: '30332', 
+    occupation1: 'Construction and Extraction', 
+    occupation2: 'Education, Training, and Library', 
+    occupation3: 'Farming, Fishing, and Forestry', 
+    experienceBlurb: 'i get lost', 
+    dayLikeBlurb: 'i swim', 
+    userType: "Mentor"
+  }).then(function(data) {
+    console.log(data);
+  });

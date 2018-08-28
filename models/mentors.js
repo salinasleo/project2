@@ -15,7 +15,9 @@ var Mentor = sequelize.define("Mentor", {
 });
 
 return Mentor;
+
 };
+
 
 
 

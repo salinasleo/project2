@@ -2,8 +2,10 @@ DROP DATABASE IF EXISTS mentorProgram;
 
 CREATE DATABASE mentorProgram;
 
-USE mentorProgram;
+INSERT INTO `Mentors` (`id`,`firstName`,`lastName`,`email`,`zipCode`,`occupation1`,`occupation2`,`experienceBlurb`,`dayLikeBlurb`,`userType`,`createdAt`,`updatedAt`) 
+VALUES (DEFAULT,'Nemo','Salinas','salinasleo@gmail.com','23229','Arts, Design, Entertainment,Sports,and Media','Building and Grounds Cleaning and Maintenance','hq','hqrh','Mentor','2018-08-27 23:17:37','2018-08-27 23:17:37');
 
+USE mentorProgram;
 
 
 
