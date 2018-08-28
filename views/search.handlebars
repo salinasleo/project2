@@ -1,22 +1,40 @@
-{{!-- 
-{{#each }}
-{{this.firstName}}
-{{/each}} --}}
+<div id="home">
+    <div id="menForm" class="container">
 
-<ul>Your Mentor Matches:
-    
-  {{#each results}}
+<h2>Your Mentor Matches:</h2>
+<br>
+
+  {{!-- {{#each results}}
   	<li>
           <p>id: {{this.id}}</p>
   	   <p>first name: {{this.firstName}}</p>
        <p>last anme: {{this.lastName}}</p>
   	</li>
   {{/each}}
-</ul>
+</ul> --}}
 
 
-
-<div id="test">"hello"</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Experience</th>
+    </tr>
+  </thead>
+    {{#each results}}
+  <tbody>
+    <tr>
+      <th scope="row">{{this.id}}</th>
+      <td>{{this.firstName}}</td>
+      <td>{{this.lastName}}</td>
+      <td>{{this.zipCode}}</td>
+      <td>{{this.experienceBlurb}}</td>
+    </tr>
+     {{/each}}
+  </tbody>
+</table>
 
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
